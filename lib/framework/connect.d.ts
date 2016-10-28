@@ -31,14 +31,14 @@ declare namespace connect {
   }
 
   export type Passport = Authenticator<
-    void,
+    {},
     initialize.Return,
     authenticate.Options,
     authenticate.Callback,
     authenticate.Return,
-    void,
-    void,
-    void
+    authenticate.Options,
+    authenticate.Callback,
+    authenticate.Return
   >;
 }
 
