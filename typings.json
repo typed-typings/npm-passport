@@ -1,0 +1,15 @@
+{
+  "name": "passport",
+  "version": "0.3.0",
+  "main": "lib/index.d.ts",
+  "globalDevDependencies": {
+    "node": "registry:env/node#6.0.0+20161019193037"
+  },
+  "dependencies": {
+    "passport-strategy": "registry:npm/passport-strategy#1.0.0+20161027023236"
+  },
+  "devDependencies": {
+    "passport-github": "registry:npm/passport-github#1.1.0+20161027184803",
+    "passport-twitter": "registry:npm/passport-twitter#1.0.0+20161027203535"
+  }
+}
