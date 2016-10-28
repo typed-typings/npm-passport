@@ -104,8 +104,8 @@ declare class Authenticator <InitializeOptions, InitializeReturn, AuthenticateOp
    * @return {Function} middleware
    * @api public
    */
-  authenticate (strategy: string | string[], callback: AuthenticateCallback): AuthenticateReturn;
-  authenticate (strategy: string | string[], options: AuthenticateOptions, callback: AuthenticateCallback): AuthenticateReturn;
+  authenticate (strategy: string | string[], callback?: AuthenticateCallback): AuthenticateReturn;
+  authenticate (strategy: string | string[], options: AuthenticateOptions & { [key: string]: any }, callback?: AuthenticateCallback): AuthenticateReturn;
 
   /**
    * Middleware that will authorize a third-party account using the given
@@ -122,8 +122,8 @@ declare class Authenticator <InitializeOptions, InitializeReturn, AuthenticateOp
    *
    *    passport.authorize('twitter-authz', { failureRedirect: '/account' });
    */
-  authorize (strategy: string | string[], callback: AuthorizeCallback): AuthorizeReturn;
-  authorize (strategy: string | string[], options: AuthorizeOptions, callback: AuthorizeCallback): AuthorizeReturn;
+  authorize (strategy: string | string[], callback?: AuthorizeCallback): AuthorizeReturn;
+  authorize (strategy: string | string[], options: AuthorizeOptions & { [key: string]: any }, callback?: AuthorizeCallback): AuthorizeReturn;
 
   /**
    * Middleware that will restore login state from a session.
